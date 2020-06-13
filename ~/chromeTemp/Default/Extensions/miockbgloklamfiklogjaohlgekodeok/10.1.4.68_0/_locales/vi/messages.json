@@ -1,0 +1,89 @@
+{
+   "C": {
+      "message": "C"
+   },
+   "Choose_Background_": {
+      "message": "Chọn Hình nền:"
+   },
+   "Click_Keep_Changes_to_finish_installation": {
+      "message": "Nhấn vào 'Giữ Thay đổi' để hoàn tất việc cài đặt"
+   },
+   "Configure": {
+      "message": "Cấu hình"
+   },
+   "Customize_your_newtab_experience_by_choosing_your_favorite_background_color_and_image_and_get_your_local_weather_at_anytime": {
+      "message": "Tùy chỉnh trải nghiệm thẻ mới của bạn bằng cách chọn màu và ảnh nền yêu thích của bạn và nhận thông tin thời tiết địa phương của bạn bất kỳ lúc nàoe"
+   },
+   "Done": {
+      "message": "Xong"
+   },
+   "EULA": {
+      "message": "EULA (Thỏa thuận Cấp phép cho Người dùng cuối)"
+   },
+   "F": {
+      "message": "F"
+   },
+   "FAQ": {
+      "message": "Câu hỏi & Trả lời"
+   },
+   "Friday": {
+      "message": "Thứ Sáu"
+   },
+   "Got_It_": {
+      "message": "Đã hiểu"
+   },
+   "Images": {
+      "message": "Ảnh"
+   },
+   "Later": {
+      "message": "Để sau"
+   },
+   "Learn_More": {
+      "message": "Tìm hiểu Thêm"
+   },
+   "Monday": {
+      "message": "Thứ Hai"
+   },
+   "Privacy_Policy": {
+      "message": "Chính sách Bảo mật"
+   },
+   "Saturday": {
+      "message": "Thứ Bảy"
+   },
+   "Search": {
+      "message": "Tìm"
+   },
+   "Search_Manager": {
+      "message": "Công cụ Tìm kiếm"
+   },
+   "Sunday": {
+      "message": "Chủ Nhật"
+   },
+   "Support": {
+      "message": "Hỗ trợ"
+   },
+   "This_is_your_first_search_use_search_manager_to_easily_select_your_preferred_search_provider_anytime_from_Google_Yahoo_and_Bing": {
+      "message": "Đây là tìm kiếm đầu tiên của bạn... Sử dụng công cụ quản lý tìm kiếm để dễ dàng chọn nhà cung cấp dịch vụ tìm kiếm yêu thích của bạn bất kỳ lúc nào từ Google, Yahoo và Bing"
+   },
+   "Thursday": {
+      "message": "Thứ Năm"
+   },
+   "Tuesday": {
+      "message": "Thứ Ba"
+   },
+   "Uninstall": {
+      "message": "Gỡ cài đặt"
+   },
+   "Videos": {
+      "message": "Video"
+   },
+   "Web": {
+      "message": "Trang web"
+   },
+   "Wednesday": {
+      "message": "Thứ Tư"
+   },
+   "You_re_almost_done": {
+      "message": "Tác vụ của bạn đã gần hoàn tất"
+   }
+}

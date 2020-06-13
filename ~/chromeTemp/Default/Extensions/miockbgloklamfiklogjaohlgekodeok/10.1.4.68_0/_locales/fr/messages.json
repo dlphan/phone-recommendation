@@ -1,0 +1,89 @@
+{
+   "C": {
+      "message": "C"
+   },
+   "Choose_Background_": {
+      "message": "Choisir l’arrière-plan:"
+   },
+   "Click_Keep_Changes_to_finish_installation": {
+      "message": "Cliquez sur « Conserver les modifications » pour terminer l’installation"
+   },
+   "Configure": {
+      "message": "Configurer"
+   },
+   "Customize_your_newtab_experience_by_choosing_your_favorite_background_color_and_image_and_get_your_local_weather_at_anytime": {
+      "message": "Personnalisez votre expérience de nouvel onglet en choisissant votre couleur et votre image d’arrière-plan préférées et recevez votre météo locale à tout moment"
+   },
+   "Done": {
+      "message": "Terminé"
+   },
+   "EULA": {
+      "message": "CLUF"
+   },
+   "F": {
+      "message": "F"
+   },
+   "FAQ": {
+      "message": "FAQ"
+   },
+   "Friday": {
+      "message": "Vendredi"
+   },
+   "Got_It_": {
+      "message": "J’ai compris"
+   },
+   "Images": {
+      "message": "Images"
+   },
+   "Later": {
+      "message": "Plus tard"
+   },
+   "Learn_More": {
+      "message": "Découvrir la suite"
+   },
+   "Monday": {
+      "message": "Lundi"
+   },
+   "Privacy_Policy": {
+      "message": "Politique de confidentialité"
+   },
+   "Saturday": {
+      "message": "Samedi"
+   },
+   "Search": {
+      "message": "Rechercher"
+   },
+   "Search_Manager": {
+      "message": "Gestionnaire de recherche"
+   },
+   "Sunday": {
+      "message": "Dimanche"
+   },
+   "Support": {
+      "message": "Assistance"
+   },
+   "This_is_your_first_search_use_search_manager_to_easily_select_your_preferred_search_provider_anytime_from_Google_Yahoo_and_Bing": {
+      "message": "Ceci est votre première recherche… Utilisez le gestionnaire de recherche pour choisir à tout moment votre moteur de recherche préféré en toute simplicité, depuis Google, Yahoo et Bing"
+   },
+   "Thursday": {
+      "message": "Jeudi"
+   },
+   "Tuesday": {
+      "message": "Mardi"
+   },
+   "Uninstall": {
+      "message": "Désinstaller"
+   },
+   "Videos": {
+      "message": "Vidéos"
+   },
+   "Web": {
+      "message": "Web"
+   },
+   "Wednesday": {
+      "message": "Mercredi"
+   },
+   "You_re_almost_done": {
+      "message": "Vous avez presque terminé"
+   }
+}
