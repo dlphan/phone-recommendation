@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Phone Recommendation System</title>
+	<link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="style/style.css">
+</head>
+<body>
+	<header id="header" class="p-1">
+		<h1 class="l-heading">
+			<span class="text-primary"><i class="fas fa-comment-alt"></i> Phone</span> Recommendation
+		</h1>
+	</header>
+
+	<section id="form-section" class="p-1">
+		<form action="#">
+			<div class="line-1">
+				<input type="text" id="url" placeholder="Enter product link">
+				<input type="submit" value="Get Result" id="submit" class="btn">
+			</div>
+			<div class="line-2">
+				<select name="algorithm" id="algorithm">
+					<option value="SVM">SVM</option>
+					<option value="NB">Naive Bayes</option>
+					<option value="RNN">RNN</option>
+				</select>
+				<select name="method" id="method">
+					<option value="link">Link</option>
+					<option value="review">Review</option>
+				</select>
+			</div>
+		</form>
+	</section>
+
+	<section id="result-section"></section>
+
+	<!-- <footer id="footer" class="p-1">
+		<p>CopyRight 2020, All Right Reserved</p>
+	</footer> -->
+	
+	<script src="js/app.js"></script>
+</body>
+</html>
