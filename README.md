@@ -1,4 +1,4 @@
-# phone-recommendation-frontend
+# Front-end
 ## 1. Install package:
 Run command at ./phone-recommendation-frontend: `yarn`
 
@@ -7,3 +7,13 @@ Run command: `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --di
 
 ## 3. Run project:
 Run command: `yarn dev`
+
+# Back-end
+## 1. Install python:
+https://www.python.org/downloads/
+
+## 2. Install flask:
+`pip install Flask`
+
+## 3. Run code:
+`py main.py`
