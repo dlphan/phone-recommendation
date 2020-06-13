@@ -4,6 +4,7 @@ const input = document.querySelector('#url')
 const submit = document.querySelector('#submit')
 const result = document.querySelector('#result-section')
 const algorithm = document.querySelector('#algorithm')
+const method = document.querySelector('#method')
 
 const PAGE_MAX = 15
 let domparser = new DOMParser()
@@ -56,9 +57,11 @@ submit.addEventListener('click', async (e) => {
 	e.preventDefault()
 	const rs = await crawl()
 
+	const reviewResult = 'Positive'
+
 	axios({
 		method: 'post',
-		url: 'http://192.168.43.121:5000/result',
+		url: 'http://192.168.137.1:5000/result',
 		data: {
 			reviews: rs.reviews,
 			algorithm: algorithm.value
@@ -67,15 +70,6 @@ submit.addEventListener('click', async (e) => {
 		.then(({ data }) => {
 			const positive_index = data.positive_index
 			const negative_index = data.negative_index
-
-			const commentsHtml = Array.from({ length: 2 }, (_, i) => `
-			<tr>
-				<td>${rs.reviews[positive_index[i]].substring(0,100)}...</td>
-				<td>${rs.reviews[negative_index[i]].substring(0,100)}...</td>
-			</tr>
-			`).join('')
-
-			console.log(commentsHtml)
 
 			const resultHtml = `
 			<div class="img-product">
@@ -117,9 +111,15 @@ submit.addEventListener('click', async (e) => {
 						</tr>
 					</table>
 				</div>
-				<a href="#reviews" class="read-more">Read more reviews</a>
+				<a href="#reviews-section" class="read-more">Read more reviews</a>
 			</div>
 			`
-			result.innerHTML = resultHtml
+			if (method.value === 'link') {
+				result.innerHTML = resultHtml
+			} else {
+				result.innerHTML = `
+					<span>This review is ${reviewResult}</span>
+				`
+			}
 		})
 })

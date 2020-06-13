@@ -23,14 +23,15 @@ li {
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.2;
+  background: var(--secondary-color);
 }
 
-select {
+/* select {
   -webkit-appearance: none;
   -moz-appearance: none;
   text-indent: 1px;
   text-overflow: '';
-}
+} */
 
 /* Utility Classes */
 .p-1 { padding: 1rem; }
@@ -61,27 +62,37 @@ select {
 
 /* Header */
 #header {
-  display: flex;
-  justify-content: space-between;
+  position: sticky;
+  top: 0;
   background: var(--primary-color);
   color: #fff;
 }
 
 /* Form Section */
 #form-section {
-  background: var(--secondary-color);
   display: flex;
   justify-content: center;
-  align-items: center;
+}
+#form-section form {
+  background: var(--secondary-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
   font-size: 1.5rem;
+}
+
+#form-section form .line-2 {
+  display: flex;
+  /* justify-content: flex-end; */
 }
 
 #form-section input,
 #form-section #algorithm,
-#form-section #algorithm option {
+#form-section #method {
   padding: .7rem;
   font-size: 1rem;
-  margin-right: 0.5rem;
+  margin: 0.5rem 0.5rem 0 0;
   border-radius: 5px;
   border: 1px solid #e6d8d8;
   outline: none;
@@ -94,8 +105,16 @@ select {
 /* Result Section */
 #result-section {
   min-height: calc(100vh - 215px);
-  display: flex;
   background: var(--secondary-color);
+  display: flex;
+  justify-content: center;
+}
+
+#result-section > span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
 }
 
 #result-section .img-product {
@@ -155,6 +174,7 @@ select {
   position: absolute;
   bottom: 1.5rem;
   color: purple;
+  /* font-size: 1rem; */
 }
 
 #result-section .result .read-more:hover {
