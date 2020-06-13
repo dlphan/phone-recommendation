@@ -1,0 +1,89 @@
+{
+   "C": {
+      "message": "C"
+   },
+   "Choose_Background_": {
+      "message": "पृष्ठभूमि चुनें :"
+   },
+   "Click_Keep_Changes_to_finish_installation": {
+      "message": "इंस्टालेशन पूरा करने के लिए 'परिवर्तन रखें' पर क्लिक करें"
+   },
+   "Configure": {
+      "message": "कॉन्फ़िगर करें"
+   },
+   "Customize_your_newtab_experience_by_choosing_your_favorite_background_color_and_image_and_get_your_local_weather_at_anytime": {
+      "message": "अपने पसंदीदा पृष्ठभूमि रंग और छवि का चयन करके अपने newtab (नए-टैब) अनुभव को अनुकूलित करें और किसी भी समय अपने स्थानीय मौसम का हाल जानें"
+   },
+   "Done": {
+      "message": "पूरा हो गया"
+   },
+   "EULA": {
+      "message": "EULA"
+   },
+   "F": {
+      "message": "F"
+   },
+   "FAQ": {
+      "message": "सामान्य प्रश्न"
+   },
+   "Friday": {
+      "message": "शुक्रवार"
+   },
+   "Got_It_": {
+      "message": "समझ गया"
+   },
+   "Images": {
+      "message": "छवियां"
+   },
+   "Later": {
+      "message": "बाद में "
+   },
+   "Learn_More": {
+      "message": "और अधिक जानें"
+   },
+   "Monday": {
+      "message": "सोमवार"
+   },
+   "Privacy_Policy": {
+      "message": "गोपनीयता नीति"
+   },
+   "Saturday": {
+      "message": "शनिवार"
+   },
+   "Search": {
+      "message": "खोजें"
+   },
+   "Search_Manager": {
+      "message": "खोज प्रबंधक"
+   },
+   "Sunday": {
+      "message": "रविवार"
+   },
+   "Support": {
+      "message": "समर्थन"
+   },
+   "This_is_your_first_search_use_search_manager_to_easily_select_your_preferred_search_provider_anytime_from_Google_Yahoo_and_Bing": {
+      "message": "यह आपकी पहली खोज है... गूगल, याहू और बिंग में से आसानी से किसी भी समय अपने पसंदीदा खोज प्रदाता का चयन करने के लिए खोज प्रबंधक का उपयोग करें"
+   },
+   "Thursday": {
+      "message": "गुरूवार"
+   },
+   "Tuesday": {
+      "message": "मंगलवार"
+   },
+   "Uninstall": {
+      "message": "अनइंस्टाल करें "
+   },
+   "Videos": {
+      "message": "वीडियो"
+   },
+   "Web": {
+      "message": "वेब "
+   },
+   "Wednesday": {
+      "message": "बुधवार "
+   },
+   "You_re_almost_done": {
+      "message": "आपका लगभग पूरा हो गया"
+   }
+}

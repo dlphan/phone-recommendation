@@ -61,7 +61,7 @@ submit.addEventListener('click', async (e) => {
 
 	axios({
 		method: 'post',
-		url: 'http://192.168.137.1:5000/result',
+		url: 'http://127.0.0.1:5000/result',
 		data: {
 			reviews: rs.reviews,
 			algorithm: algorithm.value
