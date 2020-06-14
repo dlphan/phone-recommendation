@@ -8,6 +8,7 @@ import re
 import joblib
 import flask
 import socket
+import json
 
 ip = socket.gethostbyname(socket.gethostname())
 
@@ -187,15 +188,40 @@ def multi_predict(list_data,choice):
   result['total_positive']=num_positive
   result['total_negative']=num_negative
   result['recommend']=recommend
-  result['index_of_positive']= index_of_positive
-  result['index_of_negative']= index_of_negative
   result['model']= choice
+  result['positive_index']= index_of_positive
+  result['negative_index']= index_of_negative
 
 
   return result
 
 @app.route('/result', methods=['POST'])
 def home():
-    listData = flask.request.get_json()
-    return multi_predict(listData['reviews'],listData['algorithm'])
-app.run(ip)
+    data = flask.request.get_json()
+    result = multi_predict(data['reviews'], data['algorithm'])
+
+    positive = map(lambda x: '----' + data['reviews'][x], result["positive_index"])
+    negative = map(lambda x: '----' + data['reviews'][x], result["negative_index"])
+
+    resultFile = "<h2>POSITIVE</h2>" + "<br>".join(list(positive)) + "<br><br><h2>NEGATIVE</h2>" + "<br>".join(list(negative))
+
+    f = open('result.txt', "w", encoding="utf-8")
+    f.write(resultFile)
+    f.close()
+
+    if data['method'] == 'link':
+      return result
+    else:
+      return {
+        "single_result": 'Positive' # Thêm hàm test review nhập vào
+      }
+
+@app.route('/readmore-result')
+def readmoreReview():
+    f = open("result.txt", "r", encoding="utf-8")
+    result = f.read()
+    f.close()
+
+    return result
+
+app.run()

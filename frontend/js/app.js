@@ -10,8 +10,10 @@ const PAGE_MAX = 15
 let domparser = new DOMParser()
 
 const crawl = async () => {
+	result.innerHTML=`
+		<span>Đang xử lý...</span>
+	`
 	let productLink = input.value
-
 	const requests = Array.from(
 		{length: PAGE_MAX },
 		(_, i) => axios.get(`${productLink}/danh-gia?p=${i+1}`)
@@ -55,71 +57,77 @@ const crawl = async () => {
 
 submit.addEventListener('click', async (e) => {
 	e.preventDefault()
-	const rs = await crawl()
 
-	const reviewResult = 'Positive'
+	if (!input.value) {
+		result.innerHTML = `<span>Please enter the link or review to check</span>`
+	} else {
+		const rs = method.value == 'link' ? await crawl() : { reviews: [input.value] }
 
-	axios({
-		method: 'post',
-		url: 'http://127.0.0.1:5000/result',
-		data: {
-			reviews: rs.reviews,
-			algorithm: algorithm.value
-		}
-	})
-		.then(({ data }) => {
-			const positive_index = data.positive_index
-			const negative_index = data.negative_index
-
-			const resultHtml = `
-			<div class="img-product">
-				<img src="${rs.src}" alt="">
-			</div>
-			<div class="result">
-				<h2 class="product-name">${rs.name}</h2>
-				<ul>
-					<li>
-						<span>Total Reviews: </span>
-						<span class="total-reviews">${rs.reviews.length}</span>
-					</li>
-					<li>
-						<span>Total Positive Reviews: </span>
-						<span class="total-positive">${data.total_positive}</span>
-					</li>
-					<li>
-						<span>Total Negative Reviews: </span>
-						<span class="total-negative">${data.total_negative}</span>
-					</li>
-					<li>
-						<span>Recommend: </span>
-						<span class="recommend">${data.recommend}</span>
-					</li>
-				</ul>
-				<div class="comments">
-					<table>
-						<tr>
-							<th>Positive</th>
-							<th>Negative</th>
-						</tr>
-						<tr>
-							<td>${rs.reviews[positive_index[0]].substring(0,130)}...</td>
-							<td>${rs.reviews[negative_index[0]].substring(0,130)}...</td>
-						</tr>
-						<tr>
-							<td>${rs.reviews[positive_index[1]].substring(0,130)}...</td>
-							<td>${rs.reviews[negative_index[1]].substring(0,130)}...</td>
-						</tr>
-					</table>
-				</div>
-				<a href="#reviews-section" class="read-more">Read more reviews</a>
-			</div>
-			`
-			if (method.value === 'link') {
-				result.innerHTML = resultHtml
-			} else {
-				result.innerHTML = `
-					<span>This review is ${reviewResult}</span>
-				`
+		axios({
+			method: 'post',
+			url: 'http://127.0.0.1:5000/result',
+			data: {
+				reviews: rs.reviews,
+				algorithm: algorithm.value,
+				method: method.value
 			}
 		})
+			.then(({ data }) => {
+				const positive_index = data.positive_index
+				const negative_index = data.negative_index
+
+				const singleResult = data.single_result
+
+				if (method.value === 'link') {
+					const resultHtml = `
+					<div class="img-product">
+						<img src="${rs.src}" alt="">
+					</div>
+					<div class="result">
+						<h2 class="product-name">${rs.name}</h2>
+						<ul>
+							<li>
+								<span>Total Reviews: </span>
+								<span class="total-reviews">${rs.reviews.length}</span>
+							</li>
+							<li>
+								<span>Total Positive Reviews: </span>
+								<span class="total-positive">${data.total_positive}</span>
+							</li>
+							<li>
+								<span>Total Negative Reviews: </span>
+								<span class="total-negative">${data.total_negative}</span>
+							</li>
+							<li>
+								<span>Recommend: </span>
+								<span class="recommend">${data.recommend}</span>
+							</li>
+						</ul>
+						<div class="comments">
+							<table>
+								<tr>
+									<th>Positive</th>
+									<th>Negative</th>
+								</tr>
+								<tr>
+									<td>${rs.reviews[positive_index[0]].substring(0,130)}...</td>
+									<td>${rs.reviews[negative_index[0]].substring(0,130)}...</td>
+								</tr>
+								<tr>
+									<td>${rs.reviews[positive_index[1]].substring(0,130)}...</td>
+									<td>${rs.reviews[negative_index[1]].substring(0,130)}...</td>
+								</tr>
+							</table>
+						</div>
+						<a href="http://127.0.0.1:5000/readmore-result" target="_blank" class="read-more">Read more reviews</a>
+					</div>
+					`
+					result.innerHTML = resultHtml
+				} else {
+					result.innerHTML = `
+						<span>This review is ${singleResult}</span>
+					`
+				}
+			})
+	}
 })
