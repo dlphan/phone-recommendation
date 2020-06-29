@@ -137,27 +137,21 @@ def predict(text,choice):
   if choice=='RNN':
     X=input_vectorization(token,'RNN')
     if np.around(RNN_model.predict(X))==1:
-      print(text)
-      print("=============> Positive\n")
+      return 'positive'
     else:
-      print(text)
-      print("=============> Negative\n")
+      return 'negative'
   elif choice=='SVM':
     X=input_vectorization(token,'SVM')
     if SVM_model.predict(X)[0]==1:
-      print(text)
-      print("=============> Positive\n")
+      return 'positive'
     else:
-      print(text)
-      print("=============> Negative\n")
+      return 'negative'
   else:
     X=input_vectorization(token,'NB')
     if NB_model.predict(X)[0]==1:
-      print(text)
-      print("=============> Positive\n")
+      return 'positive'
     else:
-      print(text)
-      print("=============> Negative\n")
+      return 'negative'
 
 def multi_predict(list_data,choice):
   result=dict()
@@ -212,8 +206,9 @@ def home():
     if data['method'] == 'link':
       return result
     else:
+      rs=predict(data['reviews'][0],choice=data['algorithm'])
       return {
-        "single_result": 'Positive' # Thêm hàm test review nhập vào
+        "single_result": rs 
       }
 
 @app.route('/readmore-result')
