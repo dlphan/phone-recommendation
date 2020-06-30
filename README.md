@@ -5,15 +5,22 @@ Run command at ./phone-recommendation-frontend: `yarn`
 ## 2. Disable CORS in Chrome:
 Run command: `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp`
 
-## 3. Run project:
+## 3. Run Frontend:
 Run command: `yarn dev`
 
 # Back-end
 ## 1. Install python:
 https://www.python.org/downloads/
 
-## 2. Install flask:
-`pip install Flask`
+## 2. Install libraries:
+```
+pip install Flask
+pip install underthesea
+pip install unidecode
+pip install scikit-learn==0.23.1
+pip install keras==2.2.5
+pip install TensorFlow==1.14
+```
 
-## 3. Run code:
+## 3. Run Backend:
 `py main.py`
