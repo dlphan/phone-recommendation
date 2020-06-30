@@ -23,4 +23,4 @@ pip install TensorFlow==1.14
 ```
 
 ## 3. Run Backend:
-`py main.py`
+Run command: `py main.py`
