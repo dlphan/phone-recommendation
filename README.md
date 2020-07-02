@@ -5,6 +5,8 @@ Run command at ./phone-recommendation-frontend: `yarn`
 ## 2. Disable CORS in Chrome:
 Run command in Command prompt ( Window + R => cmd => enter): `"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" --disable-web-security --disable-gpu --user-data-dir=~/chromeTemp`
 
+Or add this before your URL: https://cors-anywhere.herokuapp.com/
+
 ## 3. Run Frontend:
 Run command: `yarn dev`
 
